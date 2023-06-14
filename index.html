@@ -1,9 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Pikachu Stat Finder" />
+    <meta name="keywords" content="mths, ics2o" />
+    <meta name="author" content="Dominic M." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/getmdl-select.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-cyan.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <!-- This is the title of the webpage -->
+    <title>Pikachu Stat Finder</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/getmdl-select.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- This is the header of the webpage -->
+          <span class="mdl-layout-title"><h3>Pikachu Stat Finder</h3></span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div id="image">
+          <img class="right-image" src="./images/pikachu.png" alt="Pikachu" />
+        </div>
+        <div class="page-content">
+          <div id="instructions">
+            Select a Stat:
+          </div>
+        <!-- Simple Select with arrow -->
+        <div class="mdl-textfield mdl-js-textfield getmdl-select">
+          <input type="text" value="" class="mdl-textfield__input" id="user-input" readonly>
+          <input type="hidden" value="" name="user-input">
+          <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+          <label for="sample2" class="mdl-textfield__label">Stat Selected</label>
+          <ul for="sample2" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+            <li class="mdl-menu__item" data-val="one">Type</li>
+            <li class="mdl-menu__item" data-val="two">Evolution</li>
+            <li class="mdl-menu__item" data-val="three">Health</li>
+            <li class="mdl-menu__item" data-val="four">Stage</li>
+            <li class="mdl-menu__item" data-val="five">Weakness</li>
+            <li class="mdl-menu__item" data-val="six">Attacks</li>
+          </ul>
+        </div>
+        <br />
+        <!-- Colored raised button -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+          onclick="myButtonClicked()"
+        >
+          Guess
+        </button>
+        <br />
+        <br />
+        <div class="page-content-answer">
+          <div id="answer"></div>
+        </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
