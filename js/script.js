@@ -44,7 +44,7 @@ const getStat = async (URLAddress) => {
       document.getElementById("answer").innerHTML = pokemonAttack1 + " and " + pokemonAttack2
     } else if (stat == "Weakness") {
       document.getElementById("answer").innerHTML = pokemonWeakness
-    } else if (stat == "Evolution") {
+    } else if (stat == "Evolves To") {
       document.getElementById("answer").innerHTML = pokemonEvolution
     } else {
       document.getElementById("answer").innerHTML = "Invalid Input"
