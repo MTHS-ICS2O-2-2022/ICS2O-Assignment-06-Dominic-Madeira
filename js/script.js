@@ -33,6 +33,7 @@ const getStat = async (URLAddress) => {
     const pokemonAttack2 = jsonData.data.attacks[1].name
     const pokemonWeakness = jsonData.data.weaknesses[0].type
     const pokemonEvolution = jsonData.data.evolvesTo[0]
+
     if (stat == "Health") {
       document.getElementById("answer").innerHTML = pokemonHP + " HP"
     } else if (stat == "Stage") {
